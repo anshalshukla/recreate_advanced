@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        Question:
+        <input type="text" name="question"><br>
+        Option1:
+        <input type="text" name="option1"><br>
+        Option2:
+        <input type="text" name="option2"><br>
+        Option3:
+        <input type="text" name="option3"><br>
+        Option4:
+        <input type="text" name="option4"><br>
+        Marks:
+        <input type="text" name="marks"><br>
+        Negative Marks:
+        <input type="text" name="negative marks"><br>
+        Subject:
+        <input type="text" name="subject"><br>
+        Correct Option:
+        <input type="radio" id="option1" name="answer" value="option1">
+        <label>Option1</label><br>
+        <input type="radio" id="option2" name="answer" value="option2">
+        <label>Option2</label><br>
+        <input type="radio" id="option3" name="answer" value="option3">
+        <label>Option3</label><br>
+        <input type="radio" id="option4" name="answer" value="option4">
+        <label>Option4</label><br><br>
+
+        <hr>
+        <button type="submit">Submit</button>
+    </form>
+
+
+</body>
+
+</html>

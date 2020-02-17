@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p>{{question.question}}</p>
+    <p>MCQ options are as follows</p>
+    <form method="POST">
+        {% csrf_token %}
+        {% for options in choice %}
+        <input type='radio' id="option{{options.pk}}" name="response" value="{{option.pk}}">{{options.choice}}<br>
+        {% endfor %}
+        <hr>
+        <p>Marks awarded if response is coorect {{question.marks}}</p>
+        <p>Penalty awarded {{question.negativeMarks}}</p>
+        <hr>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
